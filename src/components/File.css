@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600&display=swap');
+
+.data{
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.first{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.second{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    margin-left: 3%;
+}
+
+.temp{
+    text-align: center;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.8px);
+    -webkit-backdrop-filter: blur(2.8px);
+}
+
+.third {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 3%;
+}
+
+.date{
+    margin: 0 10% 0 10%;
+}
+
+.title {
+   font-weight: 600;
+   font-size:xx-large;
+
+}
+
+.value{
+    font-weight: 200;
+    font-size:medium;
+    display: flex;
+    justify-items: center;
+}
+
+.cdate{
+    display: flex;
+    flex-direction: column;
+}
+

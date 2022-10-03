@@ -6,12 +6,18 @@ import cloudy from './img/2.jpg';
 import overcast from './img/background.jpg';
 
 
+
 function App() {
 
   const [weather, setWeather] = useState(undefined);
   const [isLoading, setIsLoading] = useState(false);
   const [query, setQuery] = useState("");
   const [imgURL, setImgURL] = useState(normal);
+  const [isShown, setIsShown] = useState(false);
+
+  const handleClick = event => {
+    setIsShown(true); 
+  }
 
   async function onClick () {
     setIsLoading(true);
@@ -21,6 +27,7 @@ function App() {
     setIsLoading(false); 
     const condition = data.current.condition.text; 
     background(condition);
+    handleClick();
   }
 
   function background (description) {
@@ -47,12 +54,20 @@ function App() {
 
 
   return (
-    <div className="App" style={{backgroundImage: `url(${imgURL})`}}>
+    <div className="App" >
+      <div className="photo" style={{backgroundImage: `url(${imgURL})`}}>
         <div className= "card">
             <input className='query' type="text" placeholder='Search a city...' value={query} onChange={(e) => setQuery(e.target.value)} />
-            <button className='btn' onClick={onClick}>RADEK</button>
-            <Weather weather ={weather} isLoading={isLoading} />
-        </div>
+            <button className='btn' onClick={onClick}>
+                <i className="gg-search"></i>
+            </button>
+          </div>
+      </div>
+      <div className="info">
+        {
+           isShown ? <Weather weather ={weather} isLoading={isLoading} /> : null
+        }
+      </div>
     </div>
   );
 
