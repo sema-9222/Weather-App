@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import './App.css';
 import { Weather } from './components/Weather';
-import normal from './img/normal.png';
-import cloudy from './img/2.jpg';
-import overcast from './img/background.jpg';
+import normal from './img/background.jpg';
+import cloudy from './img/cloudy.jpg';
+import clear from './img/clear.jpg';
+import foggy from './img/foggy.jpg';
+import partlyc from './img/partlycloudy.jpg';
+import rainy from './img/rainy.jpg';
+import sunny from './img/sunny.jpg';
+import snowy from './img/snowy.jpg';
 
 
 
@@ -35,18 +40,39 @@ function App() {
       switch (description) {
 
         case "Partly cloudy":
-          setImgURL(cloudy);
-          console.log("cloudy");
+          setImgURL(partlyc);
         break;
     
         case "Clear":
-          setImgURL(overcast);  
-          console.log("clear");
+          setImgURL(clear);  
+        break;
+
+        case "Cloudy":
+        case "Overcast":
+          setImgURL(cloudy);  
+        break;
+
+        case "Foggy":
+        case "Mist":
+          setImgURL(foggy);  
         break;
       
+        case "Rainy":
+        case "Light rain":
+        case "Patchy rain possible":
+          setImgURL(rainy);  
+        break;
+
+        case "Sunny":
+          setImgURL(sunny);  
+        break;
+
+        case "Snowy":
+          setImgURL(snowy);  
+        break;
+
         default:
           setImgURL(normal);
-          console.log("default");
         break;
     }
 

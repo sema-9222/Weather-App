@@ -11,28 +11,33 @@ export function Weather (props) {
         return <div> LOading hehe </div>
     }
 
-    const temperature = weather ? `${weather.current.temp_c} C` : ""
+    const temperature = weather ? `${weather.current.temp_c}°C` : ""
 
     const iconcondition = <i className='fa fa-cloud'></i>;
     const iconlocation = <i className='fa-solid fa-location-dot'></i>;
     const icontemp = <i className='fa-solid fa-temperature-half'></i>
     const iconhumid = <i className='fa-solid fa-droplet'></i>;
     const iconwind = <i className='fa-solid fa-wind'></i>;
+    const icondate = <i class='fas fa-calendar-alt'></i>;
     const title = <p>Current<br />Forecast</p>;
 
     return(
         <div className="container">
             <div className="date">
-                <Date title = {title} value={weather.current.last_updated} />
+                <Date title = {title}/>
             </div>
             <div className="first">
                 <KeyValue value={weather && [weather.location.name, ",",  weather.location.country]} KeyValue={iconlocation}  />
-                <KeyValue value={weather && weather.current.condition.text} KeyValue={iconcondition} />
+                <KeyValue value={weather.current.last_updated} KeyValue={icondate} />
             </div>
             <div className="second">
                 <Temperature value={temperature} Temperature={icontemp}/>
             </div>
             <div className="third">
+                <KeyValue value={weather && [weather.current.feelslike_c, "°C"]} KeyValue={icontemp} />
+                <KeyValue value={weather && weather.current.condition.text} KeyValue={iconcondition} />
+            </div>
+            <div className="fourth">
                 <KeyValue value={weather && [weather.current.humidity, "%"]} KeyValue={iconhumid} />
                 <KeyValue value={weather && [weather.current.wind_kph, " km/h"]} KeyValue={iconwind}/>
             </div>        
