@@ -2,6 +2,6 @@ import './File.css';
 
 export function Date (props) {
     return (
-         <p className='title'>{props.title}</p>
+         <div className='title'>{props.title}</div>
     )
 }

@@ -18,7 +18,7 @@
 .container {
     
     display:grid;
-    grid-template-columns: [first] 280px [line1] 2px [line2] 40px [line3] 200px [line4] 10px [line5] 300px [col4-start] 10px [six] 200px [seven] 10px [eight] 200px [end] 40px;
+    grid-template-columns: [first] 280fr [line1] 2fr [line2] 40fr [line3] 200fr [line4] 10fr [line5] 300fr [col4-start] 10fr [six] 200fr [seven] 10fr [eight] 200fr [end] 40fr;
     grid-template-rows: [row1-start] 100px [second-line] 100px  [last-line];
     font-family: 'Montserrat', sans-serif;
     

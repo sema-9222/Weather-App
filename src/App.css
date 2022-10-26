@@ -8,6 +8,12 @@
   background-color: whitesmoke;
 }
 
+/*@media (max-width: 800px) {
+  .App {
+    background-color: paleturquoise;
+  }
+}*/
+
 .photo {
   display: flex;
   flex-direction: column;
@@ -113,3 +119,5 @@
   display:flex;
   justify-content: center;
 }
+
+

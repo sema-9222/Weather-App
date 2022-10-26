@@ -40,7 +40,7 @@ function App() {
     handleClick();
   }
 
-  async function Key(e){
+  async function onKeyPress(e){
     if(e.key === 'Enter'){
       onClick(e);
   }
@@ -106,7 +106,7 @@ function App() {
     <div className="App" >
       <div className="photo" style={{backgroundImage: `url(${imgURL})`}}>
         <div className= "card">
-            <input className='query' type="text" placeholder='Search a city...' value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={Key} />
+            <input className='query' type="text" placeholder='Search a city...' value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={onKeyPress} />
             <button className='btn'  onClick={onClick}>
                 <i className="gg-search"></i>
             </button>
