@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;600&display=swap');
 
 .data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     background: rgba(255, 255, 255, 0);
@@ -13,50 +16,81 @@
 }
 
 .container {
-    display: flex;
-    flex-direction: row;
+    
+    display:grid;
+    grid-template-columns: [first] 280px [line1] 2px [line2] 40px [line3] 200px [line4] 10px [line5] 300px [col4-start] 10px [six] 200px [seven] 10px [eight] 200px [end] 40px;
+    grid-template-rows: [row1-start] 100px [second-line] 100px  [last-line];
     font-family: 'Montserrat', sans-serif;
+    
 }
 
 .first{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-column-start: line3;
+    grid-column-end: line4;
+    grid-row-start: row1-start;
+    grid-row-end: last-line; 
     
 }
 
 .second{
+    display: grid;
     display: flex;
-    justify-content: flex-start;
-    align-content: center;
-    margin-left: 3%;
+    justify-content: center;
+    grid-column-start: line5;
+    grid-column-end: col4-start;
+    grid-row-start: row1-start;
+    grid-row-end: last-line; 
+    margin-left: 5%;
+    
 }
 
 .temp{
     text-align: center;
-    padding: 60px;
+    padding: 20%;
     background: rgba(255, 255, 255, 0);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.8px);
     -webkit-backdrop-filter: blur(2.8px);
+    font-size: xx-large;
+    font-weight: 600;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 10px;
 }
 
 .third {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 3%;
+    display: grid;
+    grid-column-start: six;
+    grid-column-end: seven;
+    grid-row-start: row1-start;
+    grid-row-end: last-line; 
+    margin-left: 5%;
+}
+
+.fourth{
+    display: grid;
+    grid-column-start: eight;
+    grid-column-end: end;
+    grid-row-start: row1-start;
+    grid-row-end: last-line; 
+    margin-left: 5%;
 }
 
 .date{
-    margin: 0 10% 0 10%;
+    margin: -5px 8% -5px 8%;
 }
 
 .title {
    font-weight: 600;
-   font-size:xx-large;
+   font-size: 45px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   margin: 0px;
 
 }
 
@@ -72,3 +106,31 @@
     flex-direction: column;
 }
 
+.loading-gif {
+    height: 40px;
+    width: 40px;
+    margin-left: 50%;
+    margin-top: 5%;
+}
+
+.weathericon {
+    width: 80px;
+    height: 80px;
+    padding: 10px 20px 10px -3px;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+}
+
+.line{
+    display: grid;
+    grid-column-start: line1;
+    grid-column-end: line2;
+    grid-row-start: row1-start;
+    grid-row-end: last-line; 
+    background-color: rgba(0, 0, 0, 0.662);
+    margin: 20px 0px;
+    border-radius: 50%;
+}

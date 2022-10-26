@@ -3,22 +3,30 @@ import { KeyValue } from './KeyValue';
 import './File.css';
 import { Temperature } from './Temperature';
 import {Date} from './Date';
+import loading from './loading.gif';
+import weathericon from './temperature.png';
+import { Icon } from '@iconify/react';
+import { Icons } from './Icons';
+
+
+
 
 export function Weather (props) {
     const {weather, isLoading} = props;
 
     if (isLoading) {
-        return <div> LOading hehe </div>
+        return <img className='loading-gif' src={loading} alt="Loading..." ></img>;
     }
 
     const temperature = weather ? `${weather.current.temp_c}°C` : ""
 
-    const iconcondition = <i className='fa fa-cloud'></i>;
-    const iconlocation = <i className='fa-solid fa-location-dot'></i>;
-    const icontemp = <i className='fa-solid fa-temperature-half'></i>
-    const iconhumid = <i className='fa-solid fa-droplet'></i>;
-    const iconwind = <i className='fa-solid fa-wind'></i>;
-    const icondate = <i class='fas fa-calendar-alt'></i>;
+    const iconcondition = <Icons className='fa fa-cloud' />;
+    const iconlocation = <Icons  className='fa-solid fa-location-dot' />;
+    const icontemp = <Icon style={{marginRight: "10px"}} className='icon' icon="carbon:temperature-feels-like" />
+    const iconhumid = <Icons  className='fa-solid fa-droplet' />;
+    const iconwind = <Icons  className='fa-solid fa-wind' />;
+    const icondate = <Icons className='fas fa-calendar-alt' />;
+    const weatheri = <img className='weathericon' src={weathericon} alt="weather icon" ></img>;
     const title = <p>Current<br />Forecast</p>;
 
     return(
@@ -26,12 +34,13 @@ export function Weather (props) {
             <div className="date">
                 <Date title = {title}/>
             </div>
+            <div className='line'></div> 
             <div className="first">
                 <KeyValue value={weather && [weather.location.name, ",",  weather.location.country]} KeyValue={iconlocation}  />
                 <KeyValue value={weather.current.last_updated} KeyValue={icondate} />
             </div>
             <div className="second">
-                <Temperature value={temperature} Temperature={icontemp}/>
+                <Temperature value={temperature} Temperature={weatheri}/>
             </div>
             <div className="third">
                 <KeyValue value={weather && [weather.current.feelslike_c, "°C"]} KeyValue={icontemp} />
