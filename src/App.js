@@ -31,7 +31,7 @@ function App() {
   async function onClick (e) {
     const cityName = e.target.value;
     setIsLoading(true);
-    let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=55cbdff15f4f49aaa9f132150210303&q= ${query || cityName} `);
+    let response = await fetch(`https://api.weatherapi.com/v1/current.json?key=55cbdff15f4f49aaa9f132150210303&q= ${query || cityName} `);
     let data = await response.json();
     setWeather(data);
     setIsLoading(false);
