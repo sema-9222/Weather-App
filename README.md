@@ -1,6 +1,6 @@
 ## Live version - 
 
-://sema-9222.github.io/Weather-App/
+https://sema-9222.github.io/Weather-App/
 
 
 # Getting Started with Create React App
