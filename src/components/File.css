@@ -13,14 +13,17 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.8px);
     -webkit-backdrop-filter: blur(2.8px);
+    height: 28px;
+    margin-right: 5%;
 }
 
 .container {
     
-    display:grid;
-    grid-template-columns: [first] 280fr [line1] 2fr [line2] 40fr [line3] 200fr [line4] 10fr [line5] 300fr [col4-start] 10fr [six] 200fr [seven] 10fr [eight] 200fr [end] 40fr;
-    grid-template-rows: [row1-start] 100px [second-line] 100px  [last-line];
+    display: grid;
+    grid-template-columns: [first] 280fr [line1] 2fr [line2] 40fr [line3] 200fr [line4] 10fr [line5] 300fr [col4-start] 10fr [six] 200fr [seven] 10fr [eight] 200fr [end] 30fr;
+    grid-template-rows: [row1-start] 100px [second-line] 100px  [last-line] 2px;
     font-family: 'Montserrat', sans-serif;
+    overflow:auto;
     
 }
 
@@ -30,7 +33,8 @@
     grid-column-end: line4;
     grid-row-start: row1-start;
     grid-row-end: last-line; 
-    
+    width: 250px;
+    margin-right: 5%;
 }
 
 .second{
@@ -41,7 +45,6 @@
     grid-column-end: col4-start;
     grid-row-start: row1-start;
     grid-row-end: last-line; 
-    margin-left: 5%;
     
 }
 
@@ -53,13 +56,14 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.8px);
     -webkit-backdrop-filter: blur(2.8px);
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 600;
     width: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 16px 10px;
+    overflow: hidden;
 }
 
 .third {
@@ -69,6 +73,7 @@
     grid-row-start: row1-start;
     grid-row-end: last-line; 
     margin-left: 5%;
+    width: 145px;
 }
 
 .fourth{
@@ -78,11 +83,10 @@
     grid-row-start: row1-start;
     grid-row-end: last-line; 
     margin-left: 5%;
+    width: 145px;
+    
 }
 
-.date{
-    margin: -5px 8% -5px 8%;
-}
 
 .title {
    font-weight: 600;
@@ -90,7 +94,7 @@
    display: flex;
    justify-content: center;
    align-content: center;
-   margin: 0px;
+   margin: 20% 30%;
 
 }
 
@@ -116,7 +120,7 @@
 .weathericon {
     width: 80px;
     height: 80px;
-    padding: 10px 20px 10px -3px;
+    padding: 10px 10px 10px -5px;
 }
 
 .icon {
@@ -131,6 +135,156 @@
     grid-row-start: row1-start;
     grid-row-end: last-line; 
     background-color: rgba(0, 0, 0, 0.662);
-    margin: 20px 0px;
+    margin: 15px 10%;
     border-radius: 50%;
+    padding: 0px 20%;
+
+}
+
+.title1 {
+    margin: 0% 5% 0% 5%;
+}
+
+@media screen and (max-width: 800px) {
+
+    .data{
+        height: 20%;
+        margin: 1%;
+        width: 70%;
+        font-size: small;
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: [line2] 49% [gap] 2% [line3] 49% [line4];
+        grid-template-rows: [line1] 10vh [line2] 2%  [gap] 20vh [line3] 0px [line4] 20vh[last];
+        font-size: small;
+        width: 100%;
+    }
+        .title {
+            font-weight: 600;
+            font-size: 250%;
+            margin: 0px;
+            display: grid;
+            grid-column-start: line2;
+            grid-column-end: line3;
+            grid-row-start: line1;
+            grid-row-end: line2; 
+            width: 100%;
+            display: flex;
+            justify-content: center;
+         
+         }
+
+     .titlecont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        margin-right: 6%;
+     }
+
+     .date {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 223%;
+     }
+
+   
+    .first{
+        display: grid;
+        grid-column-start: line2;
+        grid-column-end: gap;
+        grid-row-start: gap;
+        grid-row-end: line3; 
+        margin: 0px 0px 0px 3px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        justify-items: center;
+        align-items: center;
+        height: 8vh;
+      }
+
+    .second{
+        
+        display: grid;
+        grid-column-start: line3;
+        grid-column-end: line4;
+        grid-row-start: gap;
+        grid-row-end: line3; 
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        justify-items: center;
+        align-items: flex-start;
+        align-self: flex-start;
+        max-width: 100%;
+        height: 88%;
+           
+}
+    .third {
+        display: grid;
+        grid-column-start: line2;
+        grid-column-end: gap;
+        grid-row-start: line4;
+        grid-row-end: last; 
+        width: 100%;
+        margin: 0px 0px 0px 3px;
+        display: flex;
+        justify-content: flex-start;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        height: 8vh;
+        
+    }
+    .fourth{
+        display: grid;
+        grid-column-start: line3;
+        grid-column-end: line4;
+        grid-row-start: line4 ;
+        grid-row-end: last; 
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        justify-items: center;
+        align-items: center;
+        height: 8vh;
+        
+    }
+
+    .temp{
+        font-size: large;
+        overflow: hidden;
+        width: 100%;
+        height: 100%; 
+        margin: 0px 9%;
+        padding: 0px;
+        
+    }
+
+    .weathericon {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        padding: 10px 10px 10px -5px;
+    }
+
+    .line {
+        display: grid;
+        grid-column-start: line2;
+        grid-column-end: line4;
+        grid-row-start: line2 ;
+        grid-row-end: gap; 
+        background-color: black;
+
+     }
+
 }

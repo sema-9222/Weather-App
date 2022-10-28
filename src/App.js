@@ -74,6 +74,7 @@ function App() {
         case "Patchy rain possible":
         case "Light rain shower":
         case "Moderate rain at times":
+        case "Moderate rain":
           setImgURL(rainy);  
         break;
 
@@ -122,7 +123,7 @@ function App() {
               <Buttons Buttons = "Berlin" value = "Berlin"  onClick={onClick}/>
               <Buttons Buttons = "Paris" value = "Paris"  onClick={onClick}/>
               <Buttons Buttons = "Tokyo" value = "Tokyo"  onClick={onClick}/>
-              <Buttons Buttons = "Seul" value = "Seul"  onClick={onClick}/>
+              <Buttons Buttons = "Seoul" value = "Seoul"  onClick={onClick}/>
             </div>
         </div>
       </div>

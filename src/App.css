@@ -4,15 +4,11 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 576px;
+  height: 100vh;
   background-color: whitesmoke;
 }
 
-/*@media (max-width: 800px) {
-  .App {
-    background-color: paleturquoise;
-  }
-}*/
+
 
 .photo {
   display: flex;
@@ -20,19 +16,18 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 70%;
+  height: 70vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
  
-  
 }
 
 .card {
   display: flex;
   justify-content: center;
   align-items:flex-end;
-  height: 200px;
+  height: 30vh;
   width: 30%;
   
 }
@@ -53,8 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 27px;
-  width: 37px;
+  height: 5vh;
   border: none;
   background:none;
   background: rgba(255, 255, 255, 0);
@@ -70,6 +64,7 @@
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   margin-top: 25px;
+ 
 }
 
 
@@ -120,4 +115,50 @@
   justify-content: center;
 }
 
+@media (max-width: 800px) {
+  .App {
+    position:absolute; 
+    height:100vh; 
+    width:100%; 
+    display: block;
+  }
 
+  .card {
+    height: 100px;
+    width: 30%;
+    
+  }
+
+  .photo {
+    height: 47vh;
+  }
+
+  .buttons{
+    margin: 5% 2% 2% 2%;
+  }
+
+  .firstcon{
+    width: 350px;
+}
+
+.secondcon{
+  width: 350px ;
+}
+
+.h1title {
+  font-size: 50px;
+}
+
+.logo{
+  width: 30%;
+  height: 30;
+  margin: 10% 7%;
+}
+
+.cont{
+  display: flex;
+  align-items: center;
+  margin-top: 8%; 
+}
+
+}

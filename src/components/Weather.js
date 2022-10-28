@@ -27,7 +27,9 @@ export function Weather (props) {
     const iconwind = <Icons  className='fa-solid fa-wind' />;
     const icondate = <Icons className='fas fa-calendar-alt' />;
     const weatheri = <img className='weathericon' src={weathericon} alt="weather icon" ></img>;
-    const title = <p>Current<br />Forecast</p>;
+    const title = <div className='titlecont'>
+        <p className= "title1">Current </p> <p className= "title1">Forecast</p>
+        </div>;
 
     return(
         <div className="container">
