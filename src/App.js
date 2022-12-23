@@ -85,6 +85,7 @@ function App() {
         case "Snowy":
         case "Patchy light snow":
         case "snow":
+        case "Light snow":
           setImgURL(snowy);  
         break;
 
